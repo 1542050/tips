@@ -11,11 +11,11 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 
 # 2. Install VirtualBox
 sudo apt-get update
-sudo apt-get install -y linux-headers-`uname -r` build-essential virtualbox-5.1 dkms
+sudo apt-get install -y linux-headers-`uname -r` build-essential virtualbox-5.0 dkms
 
 # 3. Instal VirtualBox extension pack
-wget http://download.virtualbox.org/virtualbox/5.1.18/Oracle_VM_VirtualBox_Extension_Pack-5.1.18-114002.vbox-extpack
-sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.18-114002.vbox-extpack
+wget http://download.virtualbox.org/virtualbox/5.0.0_RC3/Oracle_VM_VirtualBox_Extension_Pack-5.0.0_RC3-101436a.vbox-extpack
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.0_RC3-101436a.vbox-extpack
 
 # 4. Adding a new user named "vbox" with password "pass"
 sudo useradd -m vbox -G vboxusers
