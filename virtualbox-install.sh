@@ -28,7 +28,9 @@ sudo update-rc.d vboxweb-service defaults
 sudo /etc/init.d/vboxweb-service restart
 
 # 6. Install Apache, PHP and other required stuff by PhpVirtualBox
-sudo apt-get install -y apache2-mpm-prefork apache2-utils apache2.2-bin apache2.2-common apache2 apache2-doc apache2-suexec libapache2-mod-php5 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libapr1 php5-common php5-mysql php5-suhosin php-pear wget unzip
+# sudo apt-get install -y apache2-mpm-prefork apache2-utils apache2.2-bin apache2.2-common apache2 apache2-doc apache2-suexec libapache2-mod-php5 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libapr1 php5-common php5-mysql php5-suhosin php-pear wget unzip
+sudo apt-get install php5 php5-mysql libapache2-mod-php5
+sudo apt-get install unzip
 
 # 7. Install PhpVirtualBox
 cd /var/www
