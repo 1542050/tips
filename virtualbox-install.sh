@@ -46,3 +46,7 @@ sudo cp phpvirtualbox/config.php-example phpvirtualbox/config.php
 IP=`ifconfig eth0 | grep -o 'inet addr:[0-9\.]\+ ' | grep -o '[0-9\.]\+'`
 echo "Navigate to http://$IP/phpvirtualbox and login using admin/admin"
 echo "Add the line 'var \$consoleHost = \"$IP\";' to /var/www/phpvirtualbox/config.php if you experience null:9000"
+
+#/etc/apache2/sites-enabled/000-default.conf
+#DocumentRoot /var/www/
+#service apache2 restart
