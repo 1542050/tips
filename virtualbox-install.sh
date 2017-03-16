@@ -11,11 +11,11 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 
 # 2. Install VirtualBox
 sudo apt-get update
-sudo apt-get install -y linux-headers-`uname -r` build-essential virtualbox-5.0 dkms
+sudo apt-get install -y linux-headers-`uname -r` build-essential virtualbox-4.3 dkms
 
 # 3. Instal VirtualBox extension pack
-wget http://download.virtualbox.org/virtualbox/5.0.0_RC3/Oracle_VM_VirtualBox_Extension_Pack-5.0.0_RC3-101436a.vbox-extpack
-sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.0_RC3-101436a.vbox-extpack
+wget http://download.virtualbox.org/virtualbox/4.3.30/Oracle_VM_VirtualBox_Extension_Pack-4.3.30-101610a.vbox-extpack
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.30-101610a.vbox-extpack
 
 # 4. Adding a new user named "vbox" with password "pass"
 sudo useradd -m vbox -G vboxusers
@@ -34,10 +34,10 @@ sudo apt-get install unzip
 
 # 7. Install PhpVirtualBox
 cd /var/www
-sudo wget https://nchc.dl.sourceforge.net/project/phpvirtualbox/phpvirtualbox-5.0-5.zip
-sudo unzip -q phpvirtualbox-5.0-5.zip
-sudo rm phpvirtualbox-5.0-5.zip
-sudo mv phpvirtualbox-5.0-5 phpvirtualbox
+sudo wget https://nchc.dl.sourceforge.net/project/phpvirtualbox/phpvirtualbox-4.3-3.zip
+sudo unzip -q phpvirtualbox-4.3-3.zip
+sudo rm phpvirtualbox-4.3-3.zip
+sudo mv phpvirtualbox-4.3-3 phpvirtualbox
 
 # 8. Use default configuration
 sudo cp phpvirtualbox/config.php-example phpvirtualbox/config.php
